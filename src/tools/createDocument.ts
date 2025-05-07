@@ -58,7 +58,7 @@ registerTool<CreateDocumentArgs>({
         payload.template = args.template;
       }
 
-      const response = await outlineClient.post('/documents', payload);
+      const response = await outlineClient.post('/documents.create', payload);
       return response.data.data;
     } catch (error: any) {
       console.error('Error creating document:', error.message);
